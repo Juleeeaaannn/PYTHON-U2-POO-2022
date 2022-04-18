@@ -36,3 +36,4 @@ if __name__ == '__main__':
             print('el identificador se repite')
         elif(cont<1):
             print('el identificador no se repite')
+        archivo.close()
