@@ -1,6 +1,3 @@
-from pickle import NONE
-
-
 class Email:
     __idCuenta=''
     __dominio=''
@@ -21,9 +18,14 @@ class Email:
             print('nuevo objeto creado')
             return nuevoemail
         else: print('error correo.')
-    def setContasena(self,contra):
-        if(self.__contrasena==contra):
-            nueva=input('ingrese nueva contraseña: ')
-            self.__contrasena=nueva
-            print('su nueva contraseña es: {}'.format(self.__contrasena))
-        else: print('las contraseñas no coinciden')
+    def setContasena(self):
+        band = 1
+        while(band==1):
+            passw = input('ingrese contraseña actual para modificar:')
+            if(self.__contrasena==passw):
+                band=-1
+                nueva=input('ingrese nueva contraseña: ')
+                self.__contrasena=nueva
+                print('su nueva contraseña es: {}'.format(self.__contrasena))
+            else:
+                print('las contraseñas no coinciden')
