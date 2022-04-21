@@ -3,6 +3,7 @@ import csv
 from ClaseEmail import Email
 if __name__ == '__main__':
     band=1
+    lisa=[]
     os.system('cls')
     while(band!=-1):
         print('1.crear instacia de email a partir de sus atributos y modificar contraseña')
@@ -27,14 +28,17 @@ if __name__ == '__main__':
             nuevoEmail=newobj.crearCuenta(nuevoEmail)
             continue
         if(inp=='3'):
-            archivo= open('correos.csv')
+            archivo=open("actividad 1/correos.csv")
             cont=0
             reader=csv.reader(archivo,delimiter=',')
             ide=input('ingrese identificador a buscar: ')
             for fila in reader:
                 if (fila[0] == ide):
                     cont += 1
-                objetocsv=Email(fila[0],fila[1],[fila[2],fila[3]])
+                objeto= Email(fila[0],fila[1],fila[2],fila[3])
+                lista.append(objeto)
+            for elemento in lista:
+                print(elemento)
             print('la cantidad de personas que tienen el mismo identificador {} son {}'.format(ide,cont))
             if(cont>1):
                 print('el identificador se repite')
