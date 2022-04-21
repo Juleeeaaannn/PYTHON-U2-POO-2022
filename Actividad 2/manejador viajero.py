@@ -1,4 +1,4 @@
-from viajero import Viajero
+from Viajero import Viajero
 class Lista:
     __viajeros=[]
     def __init__(self):
