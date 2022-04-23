@@ -3,7 +3,7 @@ import csv
 from ClaseEmail import Email
 if __name__ == '__main__':
     band=1
-    lisa=[]
+    lista=[]
     os.system('cls')
     while(band!=-1):
         print('1.crear instacia de email a partir de sus atributos y modificar contraseña')
