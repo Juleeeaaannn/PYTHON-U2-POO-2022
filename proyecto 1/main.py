@@ -28,7 +28,7 @@ if __name__ == '__main__':
             nuevoEmail=newobj.crearCuenta(nuevoEmail)
             continue
         if(inp=='3'):
-            archivo=open("actividad 1/correos.csv")
+            archivo=open("correos.csv")
             cont=0
             reader=csv.reader(archivo,delimiter=',')
             ide=input('ingrese identificador a buscar: ')
