@@ -1,3 +1,4 @@
+from manejador import ManejadorRegistro
 class Menu:
     __switcher=None
     def __init__(self):
@@ -11,5 +12,15 @@ class Menu:
             func(manejador)
         else:
             func()
+    def opcion1(self,manejador):
+        if(type(manejador)==ManejadorRegistro):
+            manejador.MayoryMenor()
+        
+    def opcion2(self,manejador):
+        if(type(manejador)==ManejadorRegistro):
+            manejador.Promedio()
+    def opcion3(self,manejador):
+        if(type(manejador)==ManejadorRegistro):
+            manejador.Dia()
     def salir(self):
         print('terminado!')
