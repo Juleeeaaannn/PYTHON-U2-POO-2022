@@ -1,3 +1,4 @@
+import contextvars
 from registro import Registro
 import csv
 
@@ -61,3 +62,11 @@ class ManejadorRegistro:
                 acum+=self.__lista[j][i].getTemperatura()
                 cont+=1
             print('la hora:{} tiene un promedio mensual de:{:.2f}'.format(i+1,acum/cont))
+    def Dia(self):
+        num=int(input('Ingrese Dia a buscar:'))-1
+        print('Hora','temperatura','Humedad','Presion',sep='        ')
+        for i in range(self.__hora):
+            print(i+1,end='             ')
+            print(self.__lista[num][i].getTemperatura(),end='              ')
+            print(self.__lista[num][i].getHumedad(),end='                ')
+            print(self.__lista[num][i].getPresion())
