@@ -1,13 +1,22 @@
 from menu import Menu
-from manejador import ManejadorRegistro as manejador
+from manejador import Manejador
 if __name__=='__main__':
     menu=Menu()
+    manejador=Manejador()
     salir=False
+    band=0
     while not salir:
+        print('------------------------------------------')
         print('1.Actualizar el valor del vehículo de cada plan')
-        print('2.Indicar la temperatura promedio mensual por cada hora')
-        print('3.Dado el dia listar hora, temperatura y presion')
-        print('4.Salir')
+        print('2.Mostrar codigo del plan, modelo y version del vehiculo, ingresando un valor')
+        print('3.Mostrar monto que se debe haber pagado para licitar un vehiculo')
+        print('4.Ingresando un codigo, Modificar la cantidad de cuotas que deben tener pagas para licitar')
+        print('5.Salir')
         op=input('->')
+        print('------------------------------------------')
+        if band != -1:
+                manejador.leerArchivo()
+                print('archivo leido')
+                band=-1
         menu.opcion(op,manejador)
-        salir = op =='4'
+        salir = op =='5'
