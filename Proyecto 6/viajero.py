@@ -13,10 +13,9 @@ class Viajero:
     def getMillas(self):
         return self.__millas_acum
     def __gt__(self,otro):
+        resultado=False
         if(self.__millas_acum > otro.getMillas()):
             resultado=True
-        else:
-            resultado=False
         return resultado
     def __add__(self,otro):
         return (self.__millas_acum+otro)
